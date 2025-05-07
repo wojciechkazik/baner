@@ -1,0 +1,43 @@
+<style>
+  /* Wrapper z paddingiem, by margin-top nie uciekał na zewnątrz */
+  .banner-wrapper {
+    padding-top: 50px; /* 50px odstępu od tekstu powyżej */
+  }
+
+  /* Klikalny baner */
+  .responsive-banner {
+    display: block;            /* link jako blok, by obejmował cały obraz */
+    width: 100%;               /* 100% szerokości kontenera/embedu */
+    margin-bottom: 20px;       /* 20px odstępu pod banerem */
+    overflow: hidden;          /* obcinanie rogów */
+    border-radius: 20px;       /* zaokrąglone rogi */
+    transition: box-shadow 0.3s ease-in-out;
+    text-decoration: none;     /* usuwa ewentualne podkreślenie linku */
+  }
+
+  /* Cień wokół bannera po najechaniu */
+  .responsive-banner:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Obrazek – zawsze dopasowany do kontenera */
+  .responsive-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
+
+<div class="banner-wrapper">
+  <a
+    class="responsive-banner"
+    href="https://www.naffy.io/magdalena-kazimierowicz/55-gotowych-projektow-rabat-do-ogrodu-30-pomyslow-na-zywoplot-Kc8"
+    target="_blank"
+    rel="noopener"
+  >
+    <img
+      src="https://global.divhunt.com/89b30cc5d302484d82726c88f5122766_92696.webp"
+      alt="55 gotowych projektów rabat do ogrodu – 30 pomysłów na żywopłot"
+    />
+  </a>
+</div>
