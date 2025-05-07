@@ -64,8 +64,37 @@
 }
 
 .garden-banner .image img {
-  max-width: 160px;
+  max-width: 300px;
   height: auto;
+}
+
+/* 🔶 RESPONSYWNOŚĆ 🔶 */
+@media screen and (max-width: 1000px) {
+  .garden-banner {
+    flex-direction: column;      /* układ góra–dół */
+    align-items: center;         /* wyśrodkowanie elementów */
+    padding: 20px;               /* mniejsze paddingi na małym ekranie */
+  }
+  .garden-banner .text,
+  .garden-banner .image {
+    width: 100%;                 /* zajmują całą szerokość */
+    flex: none;                  /* wyłączamy flex-grow/shrink */
+  }
+  .garden-banner .image {
+    margin-top: 20px;            /* odstęp nad obrazkiem */
+  }
+  /* Opcjonalnie: dostosowanie rozmiarów czcionek */
+  .garden-banner h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .garden-banner ul {
+    font-size: 16px;
+  }
+  .garden-banner .button {
+    width: auto;
+    margin: 0 auto;             /* przycisk wyśrodkowany */
+  }
 }
 </style>
 
@@ -80,11 +109,11 @@
       <li>Instrukcje i plany sadzenia</li>
       <li>Oszczędność pieniędzy i zero chaosu</li>
     </ul>
-    <p class="cta">👉 Pobierz e-book za 300 zł<br>
+    <p class="cta">👉 Z kodem "BLOG-WZ" pobierz e-book za 150 zł<br>
     Zaplanuj ogród jak profesjonalista – bez błędów i bez stresu</p>
-    <a href="/ebook-rabaty-i-zywoploty" class="button">Kup teraz – 300 zł</a>
+    <a href="https://www.naffy.io/magdalena-kazimierowicz/55-gotowych-projektow-rabat-do-ogrodu-30-pomyslow-na-zywoplot-Kc8" class="button">Kup teraz</a>
   </div>
   <div class="image">
-    <img src="https://global.divhunt.com/ffdd6ce56f7c5a309102e8a9ea533d3f_44156.webp" alt="E-book rabaty i żywopłoty">
+    <img src="https://global.divhunt.com/2dfb6e0a25f1d8cb47453d2ba6761de8_38428.webp" alt="E-book rabaty i żywopłoty">
   </div>
 </div>
