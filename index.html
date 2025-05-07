@@ -1,43 +1,90 @@
 <style>
-  /* Wrapper z paddingiem, by margin-top nie uciekał na zewnątrz */
-  .banner-wrapper {
-    padding-top: 50px; /* 50px odstępu od tekstu powyżej */
-  }
+.garden-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #482fd8;
+  color: white;
+  border-radius: 20px;
+  padding: 40px;
+  font-family: 'Inter', sans-serif;
+  max-width: 1000px;
+  margin: 40px auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 
-  /* Klikalny baner */
-  .responsive-banner {
-    display: block;            /* link jako blok, by obejmował cały obraz */
-    width: 100%;               /* 100% szerokości kontenera/embedu */
-    margin-bottom: 20px;       /* 20px odstępu pod banerem */
-    overflow: hidden;          /* obcinanie rogów */
-    border-radius: 20px;       /* zaokrąglone rogi */
-    transition: box-shadow 0.3s ease-in-out;
-    text-decoration: none;     /* usuwa ewentualne podkreślenie linku */
-  }
+.garden-banner .text {
+  flex: 1 1 500px;
+}
 
-  /* Cień wokół bannera po najechaniu */
-  .responsive-banner:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
+.garden-banner h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
 
-  /* Obrazek – zawsze dopasowany do kontenera */
-  .responsive-banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+.garden-banner ul {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 10px 0 20px 0;
+  padding-left: 20px;
+}
+
+.garden-banner ul li::before {
+  content: "✅";
+  margin-right: 8px;
+  color: #ffffff;
+}
+
+.garden-banner p.cta {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.garden-banner .button {
+  background-color: #ffffff;
+  color: #482fd8;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.garden-banner .button:hover {
+  background-color: #ddd;
+}
+
+.garden-banner .image {
+  flex: 0 0 200px;
+  text-align: center;
+}
+
+.garden-banner .image img {
+  max-width: 160px;
+  height: auto;
+}
 </style>
 
-<div class="banner-wrapper">
-  <a
-    class="responsive-banner"
-    href="https://www.naffy.io/magdalena-kazimierowicz/55-gotowych-projektow-rabat-do-ogrodu-30-pomyslow-na-zywoplot-Kc8"
-    target="_blank"
-    rel="noopener"
-  >
-    <img
-      src="https://global.divhunt.com/89b30cc5d302484d82726c88f5122766_92696.webp"
-      alt="55 gotowych projektów rabat do ogrodu – 30 pomysłów na żywopłot"
-    />
-  </a>
+<div class="garden-banner">
+  <div class="text">
+    <h2>🌿 55 rabat + 30 żywopłotów – jak z katalogu!</h2>
+    <p><b>Co znajdziesz w środku:</b></p>
+    <ul>
+      <li>55 projektów rabat do różnych warunków</li>
+      <li>30 pomysłów na efektowne żywopłoty</li>
+      <li>Gotowe układy, bez projektanta</li>
+      <li>Instrukcje i plany sadzenia</li>
+      <li>Oszczędność pieniędzy i zero chaosu</li>
+    </ul>
+    <p class="cta">👉 Pobierz e-book za 300 zł<br>
+    Zaplanuj ogród jak profesjonalista – bez błędów i bez stresu</p>
+    <a href="/ebook-rabaty-i-zywoploty" class="button">Kup teraz – 300 zł</a>
+  </div>
+  <div class="image">
+    <img src="https://global.divhunt.com/ffdd6ce56f7c5a309102e8a9ea533d3f_44156.webp" alt="E-book rabaty i żywopłoty">
+  </div>
 </div>
