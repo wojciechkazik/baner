@@ -1,119 +1,147 @@
 <style>
-.garden-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #482fd8;
-  color: white;
-  border-radius: 20px;
-  padding: 40px;
-  font-family: 'Inter', sans-serif;
-  max-width: 1000px;
-  margin: 40px auto;
-  gap: 40px;
-  flex-wrap: wrap;
+.promo-box {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    font-family: 'Montserrat', sans-serif;
 }
 
-.garden-banner .text {
-  flex: 1 1 500px;
+.promo-content,
+.promo-image-container {
+    flex: 1 1 50%;
+    box-sizing: border-box;
 }
 
-.garden-banner h2 {
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.3;
+.promo-content {
+    padding-right: 20px;
+    text-align: left;
 }
 
-.garden-banner ul {
-  font-size: 18px;
-  line-height: 1.6;
-  margin: 10px 0 20px 0;
-  padding-left: 20px;
+.promo-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.garden-banner ul li::before {
-  content: "✅";
-  margin-right: 8px;
-  color: #ffffff;
+.promo-image {
+    width: 100%;
+    border-radius: 20px;
 }
 
-.garden-banner p.cta {
-  font-size: 18px;
-  margin-bottom: 20px;
+.promo-heading {
+    font-size: 28px;
+    margin: 10px 0 20px;
 }
 
-.garden-banner .button {
-  background-color: #ffffff;
-  color: #482fd8;
-  font-weight: 600;
-  padding: 12px 24px;
-  border-radius: 10px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
+.promo-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
 }
 
-.garden-banner .button:hover {
-  background-color: #ddd;
+.promo-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-.garden-banner .image {
-  flex: 0 0 200px;
-  text-align: center;
+.promo-paragraph {
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
-.garden-banner .image img {
-  max-width: 300px;
-  height: auto;
-}
-
-/* 🔶 RESPONSYWNOŚĆ 🔶 */
-@media screen and (max-width: 1000px) {
-  .garden-banner {
-    flex-direction: column;      /* układ góra–dół */
-    align-items: center;         /* wyśrodkowanie elementów */
-    padding: 20px;               /* mniejsze paddingi na małym ekranie */
-  }
-  .garden-banner .text,
-  .garden-banner .image {
-    width: 100%;                 /* zajmują całą szerokość */
-    flex: none;                  /* wyłączamy flex-grow/shrink */
-  }
-  .garden-banner .image {
-    margin-top: 20px;            /* odstęp nad obrazkiem */
-  }
-  /* Opcjonalnie: dostosowanie rozmiarów czcionek */
-  .garden-banner h2 {
-    font-size: 26px;
+.promo-button {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-  }
-  .garden-banner ul {
-    font-size: 16px;
-  }
-  .garden-banner .button {
-    width: auto;
-    margin: 0 auto;             /* przycisk wyśrodkowany */
-  }
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #7a36db;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.promo-button:hover {
+    transform: translateX(-50%) scale(1.05);
+    background-color: #5d2cc7;
+}
+
+/* Responsive font scaling at common breakpoints */
+@media (max-width: 1200px) {
+    .promo-heading { font-size: 26px; }
+    .promo-list li,
+    .promo-paragraph { font-size: 17px; }
+    .promo-button {
+        font-size: 17px;
+        padding: 13px 26px;
+    }
+}
+@media (max-width: 992px) {
+    .promo-heading { font-size: 24px; }
+    .promo-list li,
+    .promo-paragraph { font-size: 16px; }
+    .promo-button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+@media (max-width: 768px) {
+    .promo-heading { font-size: 22px; }
+    .promo-list li,
+    .promo-paragraph { font-size: 15px; }
+    .promo-button {
+        font-size: 15px;
+        padding: 11px 22px;
+    }
+}
+@media (max-width: 576px) {
+    .promo-heading { font-size: 20px; }
+    .promo-list li,
+    .promo-paragraph { font-size: 14px; }
+    .promo-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/* Layout change on narrow screens */
+@media (max-width: 600px) {
+    .promo-box {
+        flex-direction: column;
+    }
+    .promo-content,
+    .promo-image-container {
+        flex: 1 1 100%;
+        padding: 0;
+    }
+    .promo-content {
+        margin-bottom: 20px;
+    }
 }
 </style>
 
-<div class="garden-banner">
-  <div class="text">
-    <h2>🌿 55 rabat + 30 żywopłotów – jak z katalogu!</h2>
-    <p><b>Co znajdziesz w środku:</b></p>
-    <ul>
-      <li>55 projektów rabat do różnych warunków</li>
-      <li>30 pomysłów na efektowne żywopłoty</li>
-      <li>Gotowe układy, bez projektanta</li>
-      <li>Instrukcje i plany sadzenia</li>
-      <li>Oszczędność pieniędzy i zero chaosu</li>
-    </ul>
-    <p class="cta">👉 Z kodem "BLOG-WZ" pobierz e-book za 150 zł<br>
-    Zaplanuj ogród jak profesjonalista – bez błędów i bez stresu</p>
-    <a href="https://www.naffy.io/magdalena-kazimierowicz/55-gotowych-projektow-rabat-do-ogrodu-30-pomyslow-na-zywoplot-Kc8" class="button">Kup teraz</a>
-  </div>
-  <div class="image">
-    <img src="https://global.divhunt.com/2dfb6e0a25f1d8cb47453d2ba6761de8_38428.webp" alt="E-book rabaty i żywopłoty">
-  </div>
+<div class="promo-box">
+    <div class="promo-content">
+        <h2 class="promo-heading">Planujesz ogród? Sprawdź gotowe projekty rabat!</h2>
+        <ul class="promo-list">
+            <li>📌 55 gotowych projektów/kompozycji rabat – nowoczesne układy roślin dostosowane do różnych warunków.</li>
+            <li>📌 30 efektownych żywopłotów – od zimozielonych po kwitnące i sezonowe.</li>
+            <li>📌 Instrukcję krok po kroku – praktyczne wskazówki od wyboru miejsca po pielęgnację roślin.</li>
+            <li>📌 Praktyczne porady – jak łączyć rabaty, aby stworzyć harmonijny ogród.</li>
+        </ul>
+        <p class="promo-paragraph"><b>Z kodem rabatowym "BLOG-WZ" oszczędzasz 50%! </b>Zamiast 300 zł, zapłacisz tylko 150 zł! Skorzystaj z okazji i samemu zaprojektuj swój ogród w najlepszej cenie! 🌿✨</p>
+        <a href="https://www.naffy.io/magdalena-kazimierowicz/55-gotowych-projektow-rabat-do-ogrodu-30-pomyslow-na-zywoplot-Kc8" target="_blank" class="promo-button">🌿 Gotowe projekty rabat ogrodowych 🌿</a>
+    </div>
+    <div class="promo-image-container">
+        <img src="https://global.divhunt.com/8a2fdb86fb9e758ae36f24e19f2847d7_90344.webp" alt="Promocja ogrodowa" class="promo-image">
+    </div>
 </div>
